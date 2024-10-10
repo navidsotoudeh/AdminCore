@@ -1,0 +1,82 @@
+.btn-root {
+  @apply inline-flex cursor-pointer items-center justify-center rounded-md px-6 py-5 text-center text-sm font-semibold leading-3;
+}
+
+/*=========================================== default ================================================*/
+.btn-default {
+  @apply border-[1px] border-text-40 !bg-white text-text-50 shadow-sm;
+}
+.btn-default:hover:not(:disabled) {
+  @apply !bg-text-10;
+}
+
+.btn-default:not(:disabled):is(:focus, :active) {
+  @apply !bg-text-20 outline-none;
+}
+
+.btn-default:disabled {
+  @apply cursor-not-allowed bg-pastal_grey text-[#fff];
+  /* filter: grayscale(1); */
+}
+
+/*=========================================== info ================================================*/
+.btn-info {
+  @apply !bg-secondary-normal text-white shadow-sm;
+}
+.btn-info:hover:not(:disabled) {
+  @apply !bg-secondary-60;
+}
+
+.btn-info:not(:disabled):is(:focus, :active) {
+  @apply !bg-secondary-70 outline-none;
+}
+
+.btn-info:disabled {
+  @apply cursor-not-allowed !bg-secondary-60;
+}
+/*=========================================== success ================================================*/
+.btn-success {
+  @apply !bg-Success-normal text-white shadow-sm;
+}
+.btn-success:hover:not(:disabled) {
+  @apply !bg-Success-60;
+}
+
+.btn-success:not(:disabled):is(:focus, :active) {
+  @apply !bg-Success-70 outline-none;
+}
+
+.btn-success:disabled {
+  @apply cursor-not-allowed bg-pastal_grey text-[#fff];
+  /* filter: grayscale(1); */
+}
+
+/*=========================================== error ================================================*/
+.btn-error {
+  @apply !bg-Error-normal text-white shadow-sm;
+}
+.btn-error:hover:not(:disabled) {
+  @apply !bg-Error-60;
+}
+
+.btn-error:not(:disabled):is(:focus, :active) {
+  @apply bg-Error-70 outline-none;
+}
+
+.btn-error:disabled {
+  @apply cursor-not-allowed bg-pastal_grey text-[#fff];
+  /* filter: grayscale(1); */
+}
+
+/*=========================================== large ================================================*/
+.btn-large {
+  @apply h-[48px] w-[252px] px-[24px] py-[8px];
+}
+/*=========================================== medium ================================================*/
+.btn-medium {
+  @apply h-[32px] w-[86px] px-[8px] py-[4px];
+}
+
+.btn-root:disabled {
+  @apply !bg-silver_grey text-semi_dark;
+}
