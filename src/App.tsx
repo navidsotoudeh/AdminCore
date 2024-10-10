@@ -1,16 +1,19 @@
-
-import './App.css'
+import { Suspense, useEffect } from "react";
+import "./App.css";
+import { BrowserRouter } from "react-router-dom";
+import Router from "./routes";
 
 function App() {
+  useEffect(() => {
+    document.documentElement.classList.add("ss02");
+  }, []);
   return (
-      <div className="bg-gray-50 min-h-screen">
-          <footer className="bg-white py-8">
-              <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                  <p className="text-gray-600">&copy; 2024 BrandName. All rights reserved.</p>
-              </div>
-          </footer>
-      </div>
-  )
+    <BrowserRouter>
+      <Suspense>
+        <Router />
+      </Suspense>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
